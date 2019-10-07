@@ -125,7 +125,7 @@ int32_t main(int32_t argc, char **argv) {
 
                             {
                                 int64_t secs = (previousTimer.seconds()%60);
-                                int64_t mins = (secs/60);
+                                int64_t mins = (previousTimer.seconds()/60);
                                 int64_t hours = (mins/60);
                                 std::cout << std::setw(2) << std::setfill('0') << hours << ":"
                                           << std::setw(2) << std::setfill('0') << mins << ":"
@@ -135,7 +135,7 @@ int32_t main(int32_t argc, char **argv) {
                             std::cout << " --> ";
                             {
                                 int64_t secs = (timer.seconds()%60);
-                                int64_t mins = (secs/60);
+                                int64_t mins = (timer.seconds()/60);
                                 int64_t hours = (mins/60);
                                 std::cout << std::setw(2) << std::setfill('0') << hours << ":"
                                           << std::setw(2) << std::setfill('0') << mins << ":"
