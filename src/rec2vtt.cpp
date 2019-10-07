@@ -109,11 +109,11 @@ int32_t main(int32_t argc, char **argv) {
                             }
                             cluon::data::TimeStamp now = env.sent();
                             int64_t delta = cluon::time::deltaInMicroseconds(now, previousTimeStamp);
-                            previousTimeStamp = now;
 
-                            if (!(delta > 10*1000)) {
+                            if (!(delta > 100*1000)) {
                                 continue;
                             }
+                            previousTimeStamp = now;
 
                             timer = cluon::time::fromMicroseconds(cluon::time::toMicroseconds(timer) + delta);
 
