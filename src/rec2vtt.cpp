@@ -142,7 +142,7 @@ int32_t main(int32_t argc, char **argv) {
                                           << std::setw(2) << std::setfill('0') << secs << ".";
                                 std::cout << std::setw(3) << std::setfill('0') << (timer.microseconds()/1000);
                             }
-                            std::cout << '\n';
+                            std::cout << " line:0,vertical:lr align:left size:35%" << '\n';
                             {
                                 std::time_t t = static_cast<std::time_t>(env.sent().seconds());
                                 std::cout << std::put_time(std::localtime(&t), "%Y-%m-%d %X") << "." << std::setw(3) << std::setfill('0') << (env.sent().microseconds()/1000) << ": ";
